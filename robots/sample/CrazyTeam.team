@@ -1,0 +1,7 @@
+#Robocode robot team
+#Wed Sep 01 18:10:46 ART 2021
+team.description=\                             A sample robot\n\n                     Moves around in a crazy pattern
+robocode.version=1.9.4.2
+team.author.name=Mathew Nelson and Flemming N. Larsen
+team.version=
+team.members=sample.Crazy,sample.MyFirstJuniorRobot,sample.SittingDuck,sample.Tracker,sampleteam.MyFirstLeader,sampleex.Alien,sampleex.ProxyOfGreyEminence
