@@ -1,18 +1,16 @@
 package laboratorio;
 
+//import robocode.util.Utils;
+
 public class Agressive extends StrategyClass {
 
 	public Agressive(Labo17Robot labo17Robot) {
 		super(labo17Robot);
 	}
-
+	
 	@Override
-	public void run() {
-		    robot.setColors(robot.red, robot.black, robot.yellow, robot.red, robot.white);
-		    
-//		    while(true) {
-//			robot.turnGunRight(360); // Spin gun around
-//		    }
+	public void run() {		    
+	    robot.turnGunLeft(360);
 	}
 
 	/**
@@ -20,13 +18,25 @@ public class Agressive extends StrategyClass {
 	 */
 	@Override
 	public void onScannedRobot() {
+
 //		robot.turnTo(robot.scannedBearing);
 //		robot.ahead(robot.scannedDistance);
-//		robot.bearGunTo(robot.scannedAngle);
-		
+//		robot.bearGunTo(robot.scannedBearing);
+//      
+//		Intento de calcular donde va a estar el objetivo
+//		double power = 1;
+//		double ang = robot.scannedAngle;
+//		System.out.println(ang);
+//		double d = robot.scannedDistance;
+//		System.out.println(d);
+//		double t = d/(20-3*power);
+//		int x = (int) (robot.robotX + d * Math.cos(ang));
+//		int y = (int) (robot.robotY + d * Math.sin(ang));
+//		
+//		double angleToTarget = Math.atan2(x, y);
+//		System.out.println(angleToTarget);
+//		double targetAngle = Utils.normalRelativeAngle(angleToTarget - robot.heading);
 		robot.turnGunTo(robot.scannedAngle);
-		robot.turnTo(robot.scannedAngle);
-		robot.ahead(100);
 		robot.fire(1);
 	}
 	
@@ -35,8 +45,7 @@ public class Agressive extends StrategyClass {
 	 */
 	@Override
 	public void onHitRobot() {
-//		robot.turnLeft(90 - robot.hitByBulletBearing);
-//		robot.back(100);
+		robot.back(20);
 	}
 	
 
@@ -45,8 +54,7 @@ public class Agressive extends StrategyClass {
 	 */
 	@Override
 	public void onHitByBullet() {
-//		robot.turnLeft(90 - robot.hitByBulletBearing);
-//		robot.back(100);
+		robot.doNothing();
 	}
 	
 	/**
@@ -54,7 +62,7 @@ public class Agressive extends StrategyClass {
 	 */
 	@Override
 	public void onHitWall() {
-//		robot.turnRight(-robot.hitWallBearing); //This isn't accurate but release your robot.
-//		robot.ahead(100);
+		robot.turnRight(-robot.hitWallBearing);
+		robot.ahead(100);
 	}	
 }

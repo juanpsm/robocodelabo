@@ -7,6 +7,7 @@ public class Labo17Robot extends JuniorRobot
 	Strategy strategy;
 	
 	public Labo17Robot() {
+//		setColors(red, black, yellow, red, white);
 		strategy =  new Agressive(this);
 	}
 
