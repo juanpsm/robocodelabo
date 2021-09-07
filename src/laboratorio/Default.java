@@ -10,7 +10,7 @@ public class Default implements Strategy {
 
 	@Override
 	public void run() {
-		robot.ahead(100);
+		robot.ahead(101);
 		robot.turnGunRight(360);
 		robot.back(100);
 		robot.turnGunRight(360);
@@ -21,6 +21,7 @@ public class Default implements Strategy {
 	 */
 	@Override
 	public void onScannedRobot() {
+		robot.ahead(100);
 		robot.fire(1);
 	}
 
@@ -38,5 +39,10 @@ public class Default implements Strategy {
 	@Override
 	public void onHitWall() {
 		robot.back(20);
+	}
+
+	@Override
+	public void onHitRobot() {
+		robot.back(20);		
 	}	
 }

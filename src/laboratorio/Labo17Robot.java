@@ -7,7 +7,7 @@ public class Labo17Robot extends JuniorRobot
 	Strategy strategy;
 	
 	public Labo17Robot() {
-		strategy =  new Default(this);
+		strategy =  new Agressive(this);
 	}
 
 	public void setStrategy(Strategy strategy) {
@@ -18,33 +18,29 @@ public class Labo17Robot extends JuniorRobot
         return this.strategy;
 	}
     
-	@Override	
+	@Override
 	public void run() {
-		setColors(orange, blue, white, yellow, black);
+		// setColors(red, black, yellow, red, yellow);
 		strategy.run();
 	}
 
-	/**
-	 * onScannedRobot: What to do when you see another robot
-	 */
 	@Override
 	public void onScannedRobot() {
 		strategy.onScannedRobot();
 	}
 
-	/**
-	 * onHitByBullet: What to do when you're hit by a bullet
-	 */
 	@Override
 	public void onHitByBullet() {
 		strategy.onHitByBullet();
 	}
-	
-	/**
-	 * onHitWall: What to do when you hit a wall
-	 */
+
 	@Override
 	public void onHitWall() {
+		strategy.onHitWall();
+	}
+	
+	@Override
+	public void onHitRobot() {
 		strategy.onHitWall();
 	}	
 }
