@@ -1,11 +1,9 @@
 package laboratorio;
 
-public class Default implements Strategy {
-
-	Labo17Robot robot;
+public class Default extends StrategyClass {
 	
 	public Default(Labo17Robot labo17Robot) {
-		robot = labo17Robot;
+		super(labo17Robot);
 	}
 
 	@Override

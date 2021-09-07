@@ -1,20 +1,18 @@
 package laboratorio;
 
-public class Agressive implements Strategy {
+public class Agressive extends StrategyClass {
 
-	Labo17Robot robot;
-	
 	public Agressive(Labo17Robot labo17Robot) {
-		robot = labo17Robot;
+		super(labo17Robot);
 	}
 
 	@Override
 	public void run() {
 		    robot.setColors(robot.red, robot.black, robot.yellow, robot.red, robot.white);
 		    
-		    while(true) {
-			robot.turnGunRight(360); // Spin gun around
-		    }
+//		    while(true) {
+//			robot.turnGunRight(360); // Spin gun around
+//		    }
 	}
 
 	/**
@@ -27,6 +25,8 @@ public class Agressive implements Strategy {
 //		robot.bearGunTo(robot.scannedAngle);
 		
 		robot.turnGunTo(robot.scannedAngle);
+		robot.turnTo(robot.scannedAngle);
+		robot.ahead(100);
 		robot.fire(1);
 	}
 	
@@ -35,8 +35,8 @@ public class Agressive implements Strategy {
 	 */
 	@Override
 	public void onHitRobot() {
-		robot.turnLeft(90 - robot.hitByBulletBearing);
-		robot.back(100);
+//		robot.turnLeft(90 - robot.hitByBulletBearing);
+//		robot.back(100);
 	}
 	
 
@@ -45,8 +45,8 @@ public class Agressive implements Strategy {
 	 */
 	@Override
 	public void onHitByBullet() {
-		robot.turnLeft(90 - robot.hitByBulletBearing);
-		robot.back(100);
+//		robot.turnLeft(90 - robot.hitByBulletBearing);
+//		robot.back(100);
 	}
 	
 	/**
@@ -54,7 +54,7 @@ public class Agressive implements Strategy {
 	 */
 	@Override
 	public void onHitWall() {
-		robot.turnRight(-robot.hitWallBearing); //This isn't accurate but release your robot.
-		robot.ahead(100);
+//		robot.turnRight(-robot.hitWallBearing); //This isn't accurate but release your robot.
+//		robot.ahead(100);
 	}	
 }
