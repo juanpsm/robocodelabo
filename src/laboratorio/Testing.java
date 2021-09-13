@@ -2,7 +2,7 @@ package laboratorio;
 
 import robocode.JuniorRobot;
 
-public class Testing extends StrategyClass {
+public class Testing extends AbstractStrategy {
 	
 	public Testing(Labo17Robot labo17Robot) {
 		super(labo17Robot);

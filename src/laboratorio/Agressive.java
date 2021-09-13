@@ -4,7 +4,7 @@ import robocode.JuniorRobot;
 import robocode.util.Utils;
 import java.awt.color.*;
 
-public class Agressive extends StrategyClass {
+public class Agressive extends AbstractStrategy {
 
 	public Agressive(Labo17Robot labo17Robot) {
 		super(labo17Robot);

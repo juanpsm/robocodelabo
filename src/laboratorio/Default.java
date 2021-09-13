@@ -1,6 +1,6 @@
 package laboratorio;
 
-public class Default extends StrategyClass {
+public class Default extends AbstractStrategy {
 	
 	public Default(Labo17Robot labo17Robot) {
 		super(labo17Robot);
