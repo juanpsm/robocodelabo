@@ -1,6 +1,8 @@
 package laboratorio;
 
+import robocode.JuniorRobot;
+
 public interface Strategist {
 
-	public void calculateStrategy();
+	public Strategy calculateStrategy(JuniorRobot robot);
 }

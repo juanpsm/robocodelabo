@@ -1,10 +1,12 @@
 package laboratorio;
 
+import robocode.JuniorRobot;
+
 public abstract class AbstractStrategy implements Strategy {
 	
-	Labo17Robot robot;
+	JuniorRobot robot;
 	
-	public AbstractStrategy(Labo17Robot labo17Robot) {
-		robot = labo17Robot;
+	public AbstractStrategy(JuniorRobot robot) {
+		this.robot = robot;
 	}
 }

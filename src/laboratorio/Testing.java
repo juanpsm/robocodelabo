@@ -4,8 +4,8 @@ import robocode.JuniorRobot;
 
 public class Testing extends AbstractStrategy {
 	
-	public Testing(Labo17Robot labo17Robot) {
-		super(labo17Robot);
+	public Testing(JuniorRobot robot) {
+		super(robot);
 	}
 
 	@Override
