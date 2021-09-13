@@ -1,6 +1,8 @@
 package laboratorio;
 
-//import robocode.util.Utils;
+import robocode.JuniorRobot;
+import robocode.util.Utils;
+import java.awt.color.*;
 
 public class Agressive extends StrategyClass {
 
@@ -9,7 +11,8 @@ public class Agressive extends StrategyClass {
 	}
 	
 	@Override
-	public void run() {		    
+	public void run() {
+		robot.setColors(JuniorRobot.red, JuniorRobot.red, JuniorRobot.red, JuniorRobot.red, JuniorRobot.red);
 	    robot.turnGunLeft(360);
 	}
 
