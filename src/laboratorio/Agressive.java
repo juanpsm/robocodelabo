@@ -19,24 +19,6 @@ public class Agressive extends AbstractStrategy {
 	 */
 	@Override
 	public void onScannedRobot() {
-
-//		robot.turnTo(robot.scannedBearing);
-//		robot.ahead(robot.scannedDistance);
-//		robot.bearGunTo(robot.scannedBearing);
-//      
-//		Intento de calcular donde va a estar el objetivo
-//		double power = 1;
-//		double ang = robot.scannedAngle;
-//		System.out.println(ang);
-//		double d = robot.scannedDistance;
-//		System.out.println(d);
-//		double t = d/(20-3*power);
-//		int x = (int) (robot.robotX + d * Math.cos(ang));
-//		int y = (int) (robot.robotY + d * Math.sin(ang));
-//		
-//		double angleToTarget = Math.atan2(x, y);
-//		System.out.println(angleToTarget);
-//		double targetAngle = Utils.normalRelativeAngle(angleToTarget - robot.heading);
 		robot.turnGunTo(robot.scannedAngle);
 		robot.fire(1);
 	}
@@ -47,6 +29,9 @@ public class Agressive extends AbstractStrategy {
 	@Override
 	public void onHitRobot() {
 		robot.back(20);
+		robot.ahead(50);
+		robot.back(20);
+		robot.ahead(50);
 	}
 	
 

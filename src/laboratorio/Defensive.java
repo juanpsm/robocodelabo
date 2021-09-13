@@ -11,7 +11,7 @@ public class Defensive extends AbstractStrategy{
 	
 	@Override
 	public void run() {
-		robot.setColors(JuniorRobot.blue, JuniorRobot.red, JuniorRobot.red, JuniorRobot.red, JuniorRobot.red);
+		robot.setColors(JuniorRobot.blue, JuniorRobot.blue, JuniorRobot.blue, JuniorRobot.blue, JuniorRobot.blue);
 	    robot.ahead(4000);
 		robot.turnGunLeft(360);
 	}
