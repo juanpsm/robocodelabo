@@ -13,11 +13,11 @@ public abstract class StrategistClass{
 				// el enunciado dice que "devuelve la estrategia"
 				// si no se podría hacer robot.setStrategy..
 				robot.out.println("Changed STRATEGY to: Agressive");
-				return new Agressive(robot);
+				return new Defensive(robot);
 			}
 			else {
 				robot.out.println("Changed STRATEGY to: Testing");
-				return new Testing(robot);
+				return new Agressive(robot);
 			}
 		}
 		
