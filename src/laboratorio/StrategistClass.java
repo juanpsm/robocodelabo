@@ -3,9 +3,12 @@ package laboratorio;
 import robocode.JuniorRobot;
 
 public abstract class StrategistClass{
-	public static Strategist strategist1 = new Strategist1();
-	public static Strategist strategist2 = new Strategist2();
-		
+	final public static Strategist strategist1 = new Strategist1();
+	final public static Strategist strategist2 = new Strategist2();
+	
+	private StrategistClass() {
+	}
+	
 	private static class Strategist1 implements Strategist{
 		public Strategy calculateStrategy(JuniorRobot robot) {
 			if (robot.energy < 30 || robot.others > 5){
